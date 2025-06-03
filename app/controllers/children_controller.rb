@@ -3,6 +3,29 @@ class ChildrenController < ApplicationController
     @child = Child.new
   end
 
+  def show
+    @child = Child.find(params[:id])
+  end
+
+  def edit
+    @child = Child.find(params[:id])
+  end
+
+  def update
+    @child = Child.find(params[:id])
+    if @child.update(child_params)
+      redirect_to @child, notice: '更新しました'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @child = Child.find(params[:id])
+    @child.destroy
+    redirect_to children_path, notice: '削除しました'
+  end
+
   def create
     @child = Child.new(child_params)
     @child.user = current_user

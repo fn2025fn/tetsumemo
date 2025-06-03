@@ -8,6 +8,7 @@
 | email                | string   | null: false, unique: true       |
 | encrypted_password   | string   | null: false                     |
 | name                 | string   | null: true                      |
+| role                 | string   | null: true,default: 3           |
 | created_at           | datetime | null: false                     |
 | updated_at           | datetime | null: false                     |
 

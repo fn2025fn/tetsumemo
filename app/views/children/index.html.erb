@@ -1,0 +1,12 @@
+<h2>登録済みの子供一覧</h2>
+
+<ul>
+  <% @children.each do |child| %>
+    <li>
+      <% if child.icon.attached? %>
+        <%= image_tag child.icon.variant(resize_to_limit: [100, 100]), alt: "#{child.name}のアイコン" %><br>
+      <% end %>
+      <strong><%= child.name %></strong>
+    </li>
+  <% end %>
+</ul>

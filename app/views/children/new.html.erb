@@ -1,0 +1,27 @@
+<h2>子供の登録</h2>
+
+<%= form_with(model: @child, local: true) do |form| %>
+  <% if @child.errors.any? %>
+    <div class="error-messages">
+      <% @child.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "子供の名前" %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :icon, "アイコン画像" %><br>
+    <%= form.file_field :icon %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録" %>
+  </div>
+<% end %>
+
+<%= link_to "一覧に戻る", children_path %>

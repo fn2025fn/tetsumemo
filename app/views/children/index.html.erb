@@ -8,5 +8,10 @@
       <% end %>
       <strong><%= child.name %></strong>
     </li>
+    <%= link_to "詳細", child_path(child) %>
+    <%= link_to "編集", edit_child_path(child) %>
+    <%= link_to "削除", child_path(child), method: :delete, data: { confirm: "本当に削除しますか？" } %>
+  </div>
   <% end %>
+  <%= link_to "新しい子供を登録", new_child_path %>
 </ul>

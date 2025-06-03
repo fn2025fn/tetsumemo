@@ -1,0 +1,8 @@
+<h2><%= @child.name %> さんの情報</h2>
+
+<p>アイコン：<%= image_tag @child.icon if @child.icon.attached? %></p>
+
+<p>作成日時：<%= @child.created_at.to_s(:short) %></p>
+
+<%= link_to "編集", edit_child_path(@child) %> |
+<%= link_to "一覧へ戻る", children_path %>

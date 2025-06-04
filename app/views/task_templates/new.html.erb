@@ -1,6 +1,6 @@
 <h2>新しいお手伝いテンプレートを作成</h2>
 
-<%= form_with(model: @task_template, local: true) do |f| %>
+<%= form_with model: @task_template, local: true do |f| %>
   <div>
     <%= f.label :title, "お手伝いの名前" %><br>
     <%= f.text_field :title %>

@@ -1,0 +1,17 @@
+<h2>新しいお手伝いテンプレートを作成</h2>
+
+<%= form_with(model: @task_template, local: true) do |f| %>
+  <div>
+    <%= f.label :title, "お手伝いの名前" %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :point, "ポイント" %><br>
+    <%= f.number_field :point, value: 10 %>
+  </div>
+
+  <div>
+    <%= f.submit "登録する" %>
+  </div>
+<% end %>

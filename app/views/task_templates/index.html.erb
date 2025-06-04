@@ -1,0 +1,9 @@
+<h2>お手伝いテンプレート一覧</h2>
+
+<%= link_to "新しいテンプレートを作る", new_task_template_path %>
+
+<ul>
+  <% @task_templates.each do |template| %>
+    <li><%= template.title %>（<%= template.point %> pt）</li>
+  <% end %>
+</ul>

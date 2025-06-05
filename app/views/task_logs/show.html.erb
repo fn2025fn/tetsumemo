@@ -1,0 +1,4 @@
+<% if task_log.image.attached? %>
+  <p>記録写真：</p>
+  <%= image_tag task_log.image.variant(resize_to_limit: [400, 400]) %>
+<% end %>

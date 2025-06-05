@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :task_template do
-    title { "MyString" }
-    point { 1 }
+    title { '掃除' }
+    point { 10 }
   end
 end

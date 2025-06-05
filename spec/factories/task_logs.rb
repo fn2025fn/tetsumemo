@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :task_log do
-    child { nil }
-    task_template { nil }
+    association :child
+    association :task_template
   end
 end

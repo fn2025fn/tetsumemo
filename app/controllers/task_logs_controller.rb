@@ -10,8 +10,13 @@ class TaskLogsController < ApplicationController
   def create
     @task_log = TaskLog.new(task_log_params)
     if @task_log.save
-      redirect_to child_path(@task_log.child), notice: 'お手伝いを記録しました'
+      @child = Child.find(@task_log.child_id)
+      @child.total_points += @task_log.task_template.point
+      @child.save
+      redirect_to child_path(@child), notice: 'お手伝いを記録し、ごほうびポイント加算'
     else
+      @child = Child.find(task_log_params[:child_id])
+      @task_templates = TaskTemplate.all
       render :new
     end
   end

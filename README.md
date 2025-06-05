@@ -21,6 +21,7 @@
 | id        | integer  | primary_key                         |
 | name      | string   | null: false                         |
 | icon      | string   | ActiveStorageで管理（別テーブル）   |
+| total_points | string   | default: 0, null: false          |
 | user_id   | integer  | null: false, foreign_key: true      |
 | created_at | datetime | null: false                        |
 | updated_at | datetime | null: false                        |

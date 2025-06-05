@@ -1,6 +1,24 @@
-<h2><%= @child.name %> さんの情報</h2>
+<h2><%= @child.name %> さんのお手伝い記録</h2>
 
 <p>アイコン：<%= image_tag @child.icon if @child.icon.attached? %></p>
+<p class="period">
+  <%= link_to '今日', child_path(@child, period: 'day')%> |
+  <%= link_to '今週', child_path(@child, period: 'week')%> |
+  <%= link_to '今月', child_path(@child, period: 'month')%>
+  </p>
+
+  <p><%= @total_points %> pt</p>
+
+  <ul>
+    <% @filtered_logs.each do |log| %>
+    <li>
+      <%= log.task_template.title %>(<%= log.task_template.point %>pt)
+      <%= log.created_at.strftime('%Y/%m/%d %H:%M') %>
+    </li>
+   <% end %>
+  </ul>    
+
+
 
 <p>作成日時：<%= @child.created_at.strftime('%Y/%m/%d %H:%M') %></p>
 

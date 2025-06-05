@@ -1,0 +1,19 @@
+<h2>お手伝いを記録する</h2>
+
+<%= form_with model: @task_log, url: child_task_logs_path(@child), local: true, multipart: true do |f| %>
+  <div>
+    <%= f.label :task_template_id, "お手伝い内容" %><br>
+    <%= f.collection_select :task_template_id, @task_templates, :id, :title %>
+  </div>
+
+  <div>
+    <%= f.label :image, "写真をアップロード（任意）" %><br>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.hidden_field :child_id, value: @child.id %>
+
+  <div>
+    <%= f.submit "記録する" %>
+  </div>
+<% end %>

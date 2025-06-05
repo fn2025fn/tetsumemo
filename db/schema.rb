@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_06_04_052909) do
+ActiveRecord::Schema[7.1].define(version: 2025_06_04_084052) do
   create_table "active_storage_attachments", charset: "utf8mb3", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -47,6 +47,15 @@ ActiveRecord::Schema[7.1].define(version: 2025_06_04_052909) do
     t.index ["user_id"], name: "index_children_on_user_id"
   end
 
+  create_table "task_logs", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "child_id", null: false
+    t.bigint "task_template_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["child_id"], name: "index_task_logs_on_child_id"
+    t.index ["task_template_id"], name: "index_task_logs_on_task_template_id"
+  end
+
   create_table "task_templates", charset: "utf8mb3", force: :cascade do |t|
     t.string "title", null: false
     t.integer "point", default: 10, null: false
@@ -71,4 +80,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_06_04_052909) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "children", "users"
+  add_foreign_key "task_logs", "children"
+  add_foreign_key "task_logs", "task_templates"
 end

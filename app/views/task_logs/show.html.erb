@@ -1,4 +1,11 @@
-<% if task_log.image.attached? %>
-  <p>記録写真：</p>
-  <%= image_tag task_log.image.variant(resize_to_limit: [400, 400]) %>
+<h2><%= @task_log.task_template.title %></h2>
+<% if @task_log.image.attached? %> 
+  <%= image_tag @task_log.image.variant(resize_to_limit: [400, 400]) %>
 <% end %>
+<p><%= @task_log.created_at.strftime('%Y/%m/%d') %></p>
+<div class="actions">
+  <%= link_to '編集', edit_child_task_log_path(@child, @task_log), class: 'btn' %>
+  <%= link_to '削除', child_task_log_path(@child, @task_log), method: :delete, date: { confirm: '削除しますか' }, class: 'btn btn-danger' %>
+</div>
+
+<%= link_to '戻る', album_child_task_logs_path(@child) %>

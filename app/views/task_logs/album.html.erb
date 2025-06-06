@@ -4,9 +4,11 @@
  <div class="album-grid">
   <% @image_logs.each do |log| %>
    <div class="album-item">
+    <%= link_to child_task_log_path(@child,log) do %>
     <%= image_tag log.image.variant(resize_to_limit: [300, 300]) %>
     <p><%= log.created_at.strftime('%Y/%m/%d') %></p>
     <p><%= log.task_template.title %></p>
+    <% end %>
    </div>
   <% end %>  
  </div>

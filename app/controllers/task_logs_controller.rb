@@ -26,6 +26,30 @@ class TaskLogsController < ApplicationController
     @image_logs = @child.task_logs.with_attached_image.select { |log| log.image.attached? }
   end
 
+  def show
+    @child = Child.find(params[:child_id])
+    @task_log = TaskLog.find(params[:id])
+  end
+
+  def edit
+    @child = Child.find(params[:child_id])
+    @task_log = TaskLog.find(params[:id])
+  end
+
+  def update
+    @child = Child.find(params[:child_id])
+    @task_log = TaskLog.find(params[:id])
+    @task_log.update(task_log_params)
+    redirect_to album_child_task_logs_path(@child)
+  end
+
+  def destroy
+    @child = Child.find(params[:child_id])
+    @task_log = TaskLog.find(params[:id])
+    @task_log.destroy
+    redirect_to album_child_task_logs_path(@child)
+  end
+
   private
 
   def task_log_params

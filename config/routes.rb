@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "homes#index"
   resources :children, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
-    resources :task_logs, only: [:new, :create, :show] do
+    resources :task_logs, only: [:new, :create, :show, :destroy, :edit, :update] do
       collection do
         get 'album'
       end

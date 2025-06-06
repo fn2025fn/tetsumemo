@@ -21,6 +21,11 @@ class TaskLogsController < ApplicationController
     end
   end
 
+  def album
+    @child = Child.find(params[:child_id])
+    @image_logs = @child.task_logs.with_attached_image.select { |log| log.image.attached? }
+  end
+
   private
 
   def task_log_params

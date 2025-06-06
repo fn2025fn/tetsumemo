@@ -5,6 +5,18 @@ class ChildrenController < ApplicationController
 
   def show
     @child = Child.find(params[:id])
+    start_time = if params[:period] == 'week'
+                   Time.zone.now.beginning_of_week
+                 elsif params[:period] == 'month'
+                   Time.zone.now.beginning_of_month
+                 else
+                   Time.zone.now.beginning_of_day
+                 end
+    @filtered_logs = @child.task_logs.where('created_at >= ?', start_time)
+    @total_points = 0
+    @filtered_logs.each do |log|
+      @total_points += log.task_template.point
+    end
   end
 
   def edit

@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8"
+  },
+  "scripts": {
+    "tailwind:init": "tailwindcss init -p",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
+  },
+  "name": "tetsumemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fn2025fn/tetsumemo.git"
+  },
+  "author": "fn2025fn <usui.fn.2024@gmail.com>",
+  "license": "MIT",
+  "description": "| カラム名             | 型       | Options                         | |----------------------|----------|----------------------------------| | id                   | integer  | primary_key                     | | email                | string   | null: false, unique: true       | | encrypted_password   | string   | null: false                     | | name                 | string   | null: true                      | | role                 | string   | null: true,default: 3           | | created_at           | datetime | null: false                     | | updated_at           | datetime | null: false                     |",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fn2025fn/tetsumemo/issues"
+  },
+  "homepage": "https://github.com/fn2025fn/tetsumemo#readme"
+}

@@ -17,9 +17,7 @@
     </li>
    <% end %>
   </ul>    
-<p>作成日時：<%= @child.created_at.strftime('%Y/%m/%d %H:%M') %></p>
 
 <%= link_to "思い出", album_child_task_logs_path(@child), class: "btn btn-pastel" %>
 
-<%= link_to "編集", edit_child_path(@child) %> |
 <%= link_to "一覧へ戻る", children_path %>

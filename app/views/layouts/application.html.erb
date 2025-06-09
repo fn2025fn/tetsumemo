@@ -5,22 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <header>
-    <% if user_signed_in? %>
-      <p>こんにちは、<%= current_user.name || current_user.email %>さん！</p>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { turbo: false } %>
-    <% else %>
-      <%= link_to "ログイン", new_user_session_path %> |
-      <%= link_to "新規登録", new_user_registration_path %>
-    <% end %>
-  </header>
+    <% unless controller.controller_name == 'sessions' && controller.action_name == 'new' ||
+           controller.controller_name == 'registrations' && controller.action_name == 'new' %>
+    <%= render "shared/header" %>
+  <% end %>
+
   <main>
     <%= yield %>
     </main>

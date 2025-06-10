@@ -1,23 +1,25 @@
-<h2><%= @child.name %> さんのお手伝い記録</h2>
+<h2>お手伝い記録</h2>
 
-<p>アイコン：<%= image_tag @child.icon if @child.icon.attached? %></p>
+<% if @child.icon.attached? %>
+  <%= image_tag @child.icon, class: "child-icon-show" %>
+<% end %>
+
 <p class="period">
   <%= link_to '今日', child_path(@child, period: 'day')%> |
   <%= link_to '今週', child_path(@child, period: 'week')%> |
   <%= link_to '今月', child_path(@child, period: 'month')%>
   </p>
-
-  <p><%= @total_points %> pt</p>
+  <p class="total-points"><%= @total_points %> pt</p>
 
   <ul>
     <% @filtered_logs.each do |log| %>
     <li>
       <%= log.task_template.title %>(<%= log.task_template.point %>pt)
-      <%= log.created_at.strftime('%Y/%m/%d %H:%M') %>
+      <%= log.created_at.strftime('%Y/%m/%d') %>
     </li>
    <% end %>
   </ul>    
-
-<%= link_to "思い出", album_child_task_logs_path(@child), class: "btn btn-pastel" %>
-
-<%= link_to "一覧へ戻る", children_path %>
+ <div class="button-group">
+  <%= link_to "思い出", album_child_task_logs_path(@child), class: "btn btn-pastel" %>
+  <%= link_to "戻る", root_path, class: "btn btn-pastel" %>
+ </div> 

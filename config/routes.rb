@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'task_templates/create'
   devise_for :users
   root to: "homes#index"
+  post 'register_task_logs', to: 'homes#register', as: 'register_task_logs'
   resources :children, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
     resources :task_logs, only: [:new, :create, :show, :destroy, :edit, :update] do
       collection do

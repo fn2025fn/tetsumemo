@@ -1,51 +1,42 @@
 <header class="header">
-  <h1 class="header-log">お手伝いメモリー</h1>
-  <% if current_page?(controller: "homes", action: "index") %>
   <div class="header-content">
-    <div class="left"><%= current_user.name %></div>
-    <div class="right">
-      <button id="menuToggle" class="menu-button">⋯</button>
-    </div>
-    <div id="dropupMenu" class="dropup-menu hidden">
-      <ul>  
-       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-       <li><%= link_to "手伝い項目設定", task_templates_path %></li>
-      </ul> 
-    </div>
-  </div>
+    <% if controller.controller_name == 'children' && @child.present? %>
+      <div class="left"><%= @child.name %></div>
+      <div class="right">
+        <button id="menuToggleChild" class="menu-button">⋯</button>
+        <div id="dropdownMenuChild" class="dropdown-menu">
+          <ul>
+            <% if @child.persisted? %>
+            <li><%= link_to "編集", edit_child_path(@child) %></li>
+            <li><%= link_to "削除", child_path(@child), method: :delete, data: { confirm: "本当に削除しますか？" } %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
 
-  <% elsif controller.controller_name == 'children' && @child.present? %>
-   <div class="header-content">
-    <div class="left"><%= @child.name %></div>
-    <div class="right">
-      <button id="menuToggle" class="menu-button">⋯</button>
-    </div>
-    <div id="dropupMenu" class="dropup-menu hidden">
-     <ul>
-      <li><%= link_to "編集", edit_child_path(@child) %></li>
-      <li><%= link_to "削除", child_path(@child), method: :delete, data: { confirm: "本当に削除しますか？" } %></li>
-     </ul>
-    </div>
-   </div>
+    <% elsif controller.controller_name == 'task_logs' && ['show', 'album'].include?(action_name) && @child.present? && @task_log.present?%>
+      <div class="left"><%= @child.name %></div>
+      <div class="right">
+        <button id="menuToggleLog" class="menu-button">⋯</button>
+        <div id="dropdownMenuLog" class="dropdown-menu">
+          <ul>
+            <li><%= link_to '編集', edit_child_task_log_path(@child, @task_log) %></li>
+            <li><%= link_to '削除', child_task_log_path(@child, @task_log), method: :delete, data: { confirm: '削除しますか' } %></li>
+          </ul>
+        </div>
+      </div>
 
-  <% elsif controller.controller_name == 'task_logs' && action_name == 'show' %>  
-  <div class="header-content">
-    <div class="left"><%= @child.name %></div>
-    <div class="right">
-     <button id="menuToggle" class="menu-button">⋯</button>
-    </div>
-    <ul> 
-      <li><%= link_to '編集', edit_child_task_log_path(@child, @task_log), class: 'btn' %></li>
-      <li><%= link_to '削除', child_task_log_path(@child, @task_log), method: :delete, data: { confirm: '削除しますか' }, class: 'btn btn-danger' %></li>
-    </ul>
-    </div>
+    <% else %> <!-- トップページやその他ページ -->
+      <div class="left">お手伝いメモリー</div>
+      <div class="right">
+        <button id="menuToggleRoot" class="menu-button">⋯</button>
+        <div id="dropdownMenuRoot" class="dropdown-menu">
+          <ul>
+            <li><%= link_to "子の新規登録", new_child_path %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% elsif controller.controller_name == 'task_logs' && action_name == 'album' %>
-  <div class="header-content">
-    <div class="left"><%= @child.name %></div>
-    <div class="right">
-      
-    </div>
-  </div>
-  <% end %>
-</header>  
+</header>

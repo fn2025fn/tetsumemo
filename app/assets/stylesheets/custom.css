@@ -4,7 +4,7 @@ body {
   background-color: #fcd5ce; /* パステルピンク背景 */
   font-family: sans-serif;
   margin: 0;
-  padding: 0;
+  padding-bottom: 70px;
 }
 
 .container {
@@ -74,6 +74,9 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 8px 12px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .header-log {
@@ -84,6 +87,10 @@ input[type="submit"]:hover {
 .header .left {
   font-weight: bold;
   font-size: 18px;
+}
+
+.header .right {
+  position: relative;
 }
 
 .header .right a {
@@ -102,38 +109,27 @@ input[type="submit"]:hover {
   border: none;
   cursor: pointer;
 }
-.dropup-menu {
-  position: fixed;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  border-top: 1px solid #ccc;
-  transition: bottom 0.3s ease-in-out;
-  padding: 1em;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  display: none;
+  z-index: 100;
 }
 
-.dropup-menu.show {
-  bottom: 0;
+.dropdown-menu.show {
+  display: block;
 }
 
-.dropup-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dropup-menu li {
-  margin-bottom: 1em;
-  font-size: 18px;
-  text-align: center;
-}
-
-.dropup-menu li a {
-  text-decoration: none;
-  color: #333;
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* ======トップ画面====== */
@@ -398,4 +394,53 @@ ul li {
 
 .album-detail-polaroid .btn:hover {
   background-color: #e76f51;
+}
+
+/* ======footer===== */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  z-index: 1000;
+  align-items: center;
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.footer-icon {
+  text-align: center;
+  flex: 0 1 auto;
+}
+
+.circle-avatar,
+.circle-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #555;
+  margin: 0 auto;
+}
+
+.home-icon,
+.setting-icon {
+  font-size: 24px;
+  display: block;
 }

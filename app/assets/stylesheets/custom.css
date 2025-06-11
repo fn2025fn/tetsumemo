@@ -289,3 +289,113 @@ ul li {
   text-align: center;
   margin-top: 2rem;
 }
+
+/* ======アルバム====== */
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.album-item {
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+
+.album-item:hover {
+  transform: scale(1.02);
+}
+
+.album-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.album-item p {
+  margin: 5px 0 0;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.task-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.timestamp {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .album-grid {
+    gap: 6px;
+  }
+
+  .album-item {
+    padding: 6px;
+  }
+
+  .album-item p {
+    font-size: 0.75rem;
+  }
+}
+
+/* =====アルバム詳細ページ===== */
+
+.album-detail-polaroid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px 10px 30px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  border: 1px solid #ccc;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.polaroid img {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.polaroid .caption {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.album-detail-polaroid h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.album-detail-polaroid .btn {
+  padding: 8px 16px;
+  background-color: #f4a261;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.album-detail-polaroid .btn:hover {
+  background-color: #e76f51;
+}

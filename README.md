@@ -51,7 +51,7 @@
 | image              | string   | ActiveStorageで管理（別テーブル）       |
 | created_at         | datetime | null: false（記録日時として使う）       |
 | updated_at         | datetime | null: false                             |
-
+| title              | string   | null: false                                       |
 - belongs_to :child
 - belongs_to :task_template
 - has_one_attached :image（ActiveStorage） 

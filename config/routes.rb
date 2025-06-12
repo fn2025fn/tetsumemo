@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :task_logs, only: [:new, :create, :show, :destroy, :edit, :update] do
       collection do
         get 'album'
+        get 'new_memory'
       end
     end
   end

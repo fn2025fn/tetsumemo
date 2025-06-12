@@ -1,19 +1,19 @@
 <h2><%= @child.name %> の思い出登録</h2>
 
-<%= form_with model: @task_log, url: child_task_logs_path(@child), local: true, html: { multipart: true } do |f| %>
+<div class="template-form-group"><%= form_with model: @task_log, url: child_task_logs_path(@child), local: true, html: { multipart: true } do |f| %>
 <%= f.hidden_field :child_id, value: @child.id %>
 <%= f.hidden_field :from, value:'memory' %>
-  <div>
+
     <%= f.label :title, "タイトル" %><br>
     <%= f.collection_select :task_template_id, @task_templates, :id, :title, prompt: "選択してください" %>
   </div>
 
-  <div>
+  <div class="template-form-group">
     <%= f.label :image, "写真をアップロード" %><br>
     <%= f.file_field :image %>
   </div>
 
   <div>
-    <%= f.submit "登録する" %>
+    <%= f.submit "登録" %>
   </div>
 <% end %>

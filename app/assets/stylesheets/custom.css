@@ -262,6 +262,12 @@ div.child-icon  {
   border: 2px solid #ccc;
 }
 
+.button-memory {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
 .period {
   text-align: center;
   margin-bottom: 1rem;
@@ -299,6 +305,42 @@ ul li {
   border-radius: 8px;
   font-size: 0.95rem;
 }
+.task-log {
+  background: #f7f7f7;
+  margin-bottom: 0.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.task-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  font-weight: bold;
+  color: #f78da7;
+}
+
+.task-date {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #888;
+  text-align: right;
+}
+
+.delete-button {
+  background-color: #f78da7;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 .btn-pastel {
   display: inline-block;
@@ -320,6 +362,7 @@ ul li {
   text-align: center;
   margin-top: 2rem;
 }
+
 
 /* ======アルバム====== */
 
@@ -478,6 +521,13 @@ ul li {
 .setting-icon {
   font-size: 24px;
   display: block;
+}
+
+footer a {
+  text-decoration: none;
+  border: none;
+  border-bottom: none;
+  outline: none;
 }
 
 /* =====お手伝い一覧====== */

@@ -10,7 +10,8 @@
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
-
+.env
+.byebug_history
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -29,7 +30,12 @@
 !/tmp/storage/
 !/tmp/storage/.keep
 
+# Ignore built assets
 /public/assets
+/app/assets/builds/*
+
+# Ignore node modules (JavaScript dependencies)
+/node_modules/
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key

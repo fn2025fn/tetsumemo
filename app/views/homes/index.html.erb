@@ -1,2 +1,33 @@
-<h1>お手伝い管理アプリ</h1>
+<h2>お手伝い登録</h2>
+<div class="task-grid">
+  <% @task_templates.each do |task| %>
+  <label class="task-item" data-id="<%= task.id %>">
+    <input type="radio" name="selected_task" value="<%= task.id %>" />
+    <span class="task-title"><%= task.title %></span>
+  </label>
+ <% end %>
+</div>
+
+<div class="children-row">
+  <% @children.each do |child| %>
+  <div class="child-icon child-item" data-id="<%= child.id %>">
+  <% if child.icon.attached? %>
+   <%= image_tag child.icon.variant(resize_to_fill: [80, 80]), class: "child-avatar" %>
+  <% else %>
+   <div class="child-placeholdar"><%= child.name[0] %></div>
+  <% end %>
+  </div>
+  <% end %>
+</div>
+  <input type="hidden" name="selected_child_id" id="selected_child_id"> 
+
+<div class="submit-area">
+  <%= form_with url: register_task_logs_path, method: :post, local: true do |f| %>
+   <%= hidden_field_tag :task_template_id, nil, id: "task_template_id_field" %>
+   <%= hidden_field_tag :child_id, nil, id: "child_id_field" %>
+   <%= f.submit "登録", id: "register-button" %>
+  <% end %>
+</div>  
+
+
 

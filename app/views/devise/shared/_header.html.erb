@@ -1,0 +1,28 @@
+<header class="header">
+  <% if current_page?(controller: "homes", action: "index") %>
+  <div class="header-content">
+    <div class="left"><%= current_user.name %></div>
+    <div class="right">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> |
+      <%= link_to "手伝い項目設定", task_templates_path %>
+    </div>
+  </div>
+  <% elsif controller.controller_name == 'children' %>
+    <div class="header-content">
+      <div class="left"><%= @child.name %></div>
+      <div class="right">
+        <%= link_to "編集", edit_child_path(@child) %> |
+        <%= link_to "削除", child_path(@child), method: :delete, data: { confirm: "本当に削除しますか？" } %>
+      </div>
+    </div>
+
+  <% elsif controller.controller_name == 'task_logs' && ['album', 'show'].include?(action_name) %>
+    <div class="header-content">
+      <div class="left"><%= @child.name %></div>
+      <div class="right">
+        <%= link_to "写真編集", edit_task_log_path(@task_log) %> |
+        <%= link_to "削除", task_log_path(@task_log), method: :delete, data: { confirm: "削除しますか？" } %>
+      </div>
+    </div>
+  <% end %>
+</header>  

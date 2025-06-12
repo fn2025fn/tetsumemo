@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   const menus = [
     { toggleId: 'menuToggleRoot', menuId: 'dropdownMenuRoot' },
     { toggleId: 'menuToggleChild', menuId: 'dropdownMenuChild' },

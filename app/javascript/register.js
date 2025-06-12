@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   const taskItems = document.querySelectorAll('.task-item');
   const childItems = document.querySelectorAll('.child-item');
   const taskField = document.getElementById('task_template_id_field');

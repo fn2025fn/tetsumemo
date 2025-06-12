@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   const toggle = document.getElementById('footerMenuToggle');
   const menu = document.getElementById('footerMenu');
 

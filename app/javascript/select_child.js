@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   const childIcons = document.querySelectorAll('.child-icon');
   const hiddenInput = document.getElementById('selected_child_id');
 

@@ -1,0 +1,24 @@
+<footer class="bottom-nav">
+  <div class="nav-icons">
+    <%= link_to root_path, class:"footer-icon" do %>
+    <span class="home-icon">🏠</span>
+    <% end %>
+   <% if user_signed_in? %>
+    <% current_user.children.limit(3).each do |child| %>
+      <%= link_to child_path(child), class: "footer-icon" do %>
+        <% if child.icon.attached? %>
+          <%= image_tag child.icon.variant(resize_to_fill: [40, 40]), class: "circle-avatar" %>
+          
+        <% else %>
+          <div class="circle-placeholder"><%= child.name[0] %></div>
+        <% end %>
+      <% end %>
+    <% end %>
+   <% end %> 
+  
+
+   <%= link_to task_templates_path, class: "footer-icon" do %>
+      <span class="setting-icon">⚙️</span>
+    <% end %>
+  </div>
+</footer>

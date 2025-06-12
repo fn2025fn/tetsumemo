@@ -1,0 +1,43 @@
+<header class="header">
+  <div class="header-content">
+    <% if controller.controller_name == 'children' && @child.present? %>
+      <div class="left"><%= @child.name %></div>
+      <div class="right">
+        <button id="menuToggleChild" class="menu-button">⋯</button>
+        <div id="dropdownMenuChild" class="dropdown-menu">
+          <ul>
+            <% if @child.persisted? %>
+            <li><%= link_to "編集", edit_child_path(@child) %></li>
+            <li><%= link_to "削除", child_path(@child), method: :delete, data: { confirm: "本当に削除しますか？" } %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+    <% elsif controller.controller_name == 'task_logs' && ['show', 'album'].include?(action_name) && @child.present? && @task_log.present?%>
+      <div class="left"><%= @child.name %></div>
+      <div class="right">
+        <button id="menuToggleLog" class="menu-button">⋯</button>
+        <div id="dropdownMenuLog" class="dropdown-menu">
+          <ul>
+            <li><%= link_to '編集', edit_child_task_log_path(@child, @task_log) %></li>
+            <li><%= link_to '削除', child_task_log_path(@child, @task_log), method: :delete, data: { confirm: '削除しますか' } %></li>
+          </ul>
+        </div>
+      </div>
+
+    <% else %> <!-- トップページやその他ページ -->
+      <div class="left">Taskie
+</div>
+      <div class="right">
+        <button id="menuToggleRoot" class="menu-button">⋯</button>
+        <div id="dropdownMenuRoot" class="dropdown-menu">
+          <ul>
+            <li><%= link_to "子供の新規登録", new_child_path %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</header>

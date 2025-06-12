@@ -1,14 +1,20 @@
-<h2>お手伝いテンプレート一覧</h2>
+<h2 class="page-title">お手伝いテンプレート一覧</h2>
 
-<%= link_to "+ 新しいテンプレートを作る", new_task_template_path %>
+<div class="new-template-link">
+<%= link_to "新しいテンプレート作成", new_task_template_path %>
+</div>
 
 <ul class="template-list">
   <% @task_templates.each do |template| %>
     <li class="template-item">
+      <div class="template-title">
       <strong><%= link_to template.title, task_template_path(template) %></strong>
-      （<%= template.point %> pt）
-      [<%= link_to '編集', edit_task_template_path(template) %>]
-      [<%= link_to '削除', task_template_path(template), method: :delete, data: { confirm: '本当に削除しますか？' } %>]
+      <span class="template-point">（<%= template.point %> pt）</span>
+      </div>
+      <div class="template-actions">
+      <%= link_to '編集', edit_task_template_path(template), class:  "btn-edit" %>
+      <%= link_to '削除', task_template_path(template), method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn-delete" %>
+      </div>
     </li>
   <% end %>
 </ul>

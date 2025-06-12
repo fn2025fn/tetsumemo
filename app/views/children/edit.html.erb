@@ -1,17 +1,21 @@
 <h2>子供情報を編集</h2>
 
-<%= form_with model: @child, local: true do |form| %>
-  <div>
+<div class="template-form-group"><%= form_with model: @child, local: true do |form| %>
+  
     <%= form.label :name, "名前" %><br>
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <div class="template-form-group">
     <%= form.label :icon, "アイコン画像" %><br>
     <%= form.file_field :icon %>
   </div>
-
+<div class="form-actions">
   <%= form.submit "更新する" %>
+  </div>
 <% end %>
-
+<div style="text-align: center;">
+<div class="back-link">
 <%= link_to "戻る", child_path(@child) %>
+</div>
+</div>

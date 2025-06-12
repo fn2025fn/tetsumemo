@@ -101,21 +101,33 @@
   親が複数人の子どもを登録でき、個別に記録を管理可能。
   新規登録１
   https://gyazo.com/2512695be454d80963a154430d98fc63
+
   新規登録２
   https://gyazo.com/fe2cd2cc9ee9ee00393e8c0bed82373e
+  
+  編集
+  https://gyazo.com/50ede2b4ae1ec5bce024e56823398fe9
+  
+  削除
+  https://gyazo.com/a927f6c48b97efda69f464643817c33b
 
 - **お手伝いテンプレートの作成・編集・削除**  
   親がよくあるお手伝いをテンプレートとして保存し、再利用可能。
   新規作成１
   https://gyazo.com/a275a188048f07ee8870b60467e7121a
+
   作成２
   https://gyazo.com/8a33ee84315770bf589c7c35b3435aad
+
   編集１
   https://gyazo.com/8ef39583f61ba1594bcce08099416e7f
+
   編集２
   https://gyazo.com/5e5cd287a806cfc7e571a939f0670e6d
+
   編集３
   https://gyazo.com/18562368545aaf4b3116c365132b9d8c
+  
   削除
   https://gyazo.com/0141f0972e2278dba9aaf574af478cf8
 

@@ -641,7 +641,7 @@ footer a {
   color: #fff;
 }
 
-/* =====お手伝いテンプレート作成・編集  子供の新規登録===== */
+/* =====お手伝いテンプレート作成・編集  子供の新規登録・編集　アルバムの新規登録・編集===== */
 .form-title {
   text-align: center;
   font-size: 22px;
@@ -709,7 +709,8 @@ footer a {
 }
 
 .child-card {
-  background-color: #87cefa; /* 空色 */
+  background-color: white;
+  color: #f78da7;
   border-radius: 12px;
   padding: 15px;
   margin-bottom: 15px;
@@ -732,7 +733,7 @@ footer a {
 }
 
 .child-name {
-  color: white;
+  color: #f78da7;
   font-size: 1.2rem;
 }
 

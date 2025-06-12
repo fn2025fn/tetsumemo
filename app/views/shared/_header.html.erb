@@ -27,12 +27,13 @@
       </div>
 
     <% else %> <!-- トップページやその他ページ -->
-      <div class="left">お手伝いメモリー</div>
+      <div class="left">Taskie
+</div>
       <div class="right">
         <button id="menuToggleRoot" class="menu-button">⋯</button>
         <div id="dropdownMenuRoot" class="dropdown-menu">
           <ul>
-            <li><%= link_to "子の新規登録", new_child_path %></li>
+            <li><%= link_to "子供の新規登録", new_child_path %></li>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>

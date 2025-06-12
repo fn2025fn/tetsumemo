@@ -1,4 +1,4 @@
-<h2>子供の登録</h2>
+<h2 class="form-title">子供の登録</h2>
 
 <%= form_with(model: @child, local: true) do |form| %>
   <% if @child.errors.any? %>
@@ -9,12 +9,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="template-form-group">
     <%= form.label :name, "子供の名前" %><br>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="template-form-group">
     <%= form.label :icon, "アイコン画像" %><br>
     <%= form.file_field :icon %>
   </div>
@@ -23,5 +23,8 @@
     <%= form.submit "登録" %>
   </div>
 <% end %>
-
+<div style="text-align: center;">
+<div class="back-link">
 <%= link_to "一覧に戻る", children_path %>
+</div>
+</div>

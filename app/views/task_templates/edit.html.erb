@@ -1,19 +1,22 @@
-<h2>テンプレートを編集</h2>
+<h2 class="form-title">テンプレートを編集</h2>
 
-<%= form_with(model: @task_template, local: true) do |f| %>
-  <div>
+<div class="template-form-group"><%= form_with(model: @task_template, local: true) do |f| %>
+
     <%= f.label :title, "お手伝いの名前" %><br>
     <%= f.text_field :title %>
   </div>
 
-  <div>
+  <div class="template-form-group">
     <%= f.label :point, "ポイント" %><br>
     <%= f.number_field :point %>
   </div>
 
-  <div>
+  <div class="form-actions">
     <%= f.submit "更新する" %>
   </div>
 <% end %>
-
+<div style="text-align: center;">
+<div class="back-link">
 <%= link_to '一覧へ戻る', task_templates_path %>
+</div>
+</div>

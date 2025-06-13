@@ -1,12 +1,15 @@
-<h2>お手伝い記録</h2>
+<%# <h2>お手伝い記録</h2> %>
 
 <% if @child.icon.attached? %>
   <%= image_tag @child.icon, class: "child-icon-show" %>
 <% end %>
 
 <div class="button-memory">
-  <%= link_to "思い出", album_child_task_logs_path(@child), class: "btn btn-pastel" %>
-</div>  
+  <%= link_to "アルバム", album_child_task_logs_path(@child), class: "btn btn-pastel" %>
+</div>
+<div class="button-memory">
+  <%= link_to "写真登録", new_memory_child_task_logs_path(@child), class: "btn btn-pastel" %>
+</div>
 <p class="period">
   <%= link_to '今日', child_path(@child, period: 'day')%> |
   <%= link_to '今週', child_path(@child, period: 'week')%> |
@@ -32,6 +35,6 @@
     </li>
    <% end %>
   </ul>    
- <div class="button-group">
+ <%# <div class="button-group">
   <%= link_to "戻る", root_path, class: "btn btn-pastel" %>
- </div> 
+ </div>  

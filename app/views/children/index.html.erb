@@ -1,17 +1,18 @@
 <h2>登録済みの子供一覧</h2>
 
-<ul>
+<ul class="child-list">
   <% @children.each do |child| %>
-    <li>
+    <li class="child-card">
+      <div class="child-info">
       <% if child.icon.attached? %>
-        <%= image_tag child.icon.variant(resize_to_limit: [100, 100]), alt: "#{child.name}のアイコン" %><br>
+        <%= image_tag child.icon.variant(resize_to_limit: [100, 100]), alt: "#{child.name}のアイコン", class: "child-icon" %><br>
       <% end %>
-      <strong><%= child.name %></strong>
-    </li>
-    <%= link_to "詳細", child_path(child) %>
-    <%= link_to "編集", edit_child_path(child) %>
-    <%= link_to "削除", child_path(child), method: :delete, data: { confirm: "本当に削除しますか？" } %>
+      <strong class="child-name"><%= child.name %></strong>
+      </div>
+    <div class="child-actions">
+    <%= link_to "編集", edit_child_path(child), class:  "btn-edit" %>
+    <%= link_to "削除", child_path(child), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn-delete" %>
   </div>
+  </li>
   <% end %>
-  <%= link_to "新しい子供を登録", new_child_path %>
 </ul>

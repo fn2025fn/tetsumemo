@@ -96,26 +96,42 @@
 
 - **ユーザー認証機能（Devise）**  
   ログイン・新規登録により、親が個別に子の管理が可能。
+  新規登録
+  https://gyazo.com/c197a2c48c4a5da6b67aecf02d104539
+  ログイン
+  https://gyazo.com/bd5b971bacea73e2b853a0353780dbe4
 
 - **子どもアカウントの登録・編集・削除**  
   親が複数人の子どもを登録でき、個別に記録を管理可能。
   新規登録１
   https://gyazo.com/2512695be454d80963a154430d98fc63
+
   新規登録２
   https://gyazo.com/fe2cd2cc9ee9ee00393e8c0bed82373e
+  
+  編集
+  https://gyazo.com/50ede2b4ae1ec5bce024e56823398fe9
+  
+  削除
+  https://gyazo.com/a927f6c48b97efda69f464643817c33b
 
 - **お手伝いテンプレートの作成・編集・削除**  
   親がよくあるお手伝いをテンプレートとして保存し、再利用可能。
   新規作成１
   https://gyazo.com/a275a188048f07ee8870b60467e7121a
+
   作成２
   https://gyazo.com/8a33ee84315770bf589c7c35b3435aad
+
   編集１
   https://gyazo.com/8ef39583f61ba1594bcce08099416e7f
+
   編集２
   https://gyazo.com/5e5cd287a806cfc7e571a939f0670e6d
+
   編集３
   https://gyazo.com/18562368545aaf4b3116c365132b9d8c
+
   削除
   https://gyazo.com/0141f0972e2278dba9aaf574af478cf8
 
@@ -130,6 +146,10 @@
 
 - **進捗の可視化**  
   子どもごとの日別・週別・月別のお手伝い履歴やポイントを一覧で確認可能。
+  日別・週別・月別の表示
+  https://gyazo.com/58648cb59e7559a2a2384eb17790cc41
+  子別の表示
+  https://gyazo.com/79c66429c964fdfd57fb99c1fa2a847b
 
 - **思い出写真登録・閲覧**  
   お手伝いに関連して写真を登録・アルバム形式で閲覧。
@@ -145,12 +165,6 @@
 
 ---
 
-## 画面遷移図
-
-![画面遷移図](https://gyazo.com/xxxxxxx)  
-※Figmaやdraw.ioなどで作成した画像URLを貼ってください。
-
----
 
 ## 開発環境
 

@@ -1,6 +1,6 @@
 class TaskLog < ApplicationRecord
   belongs_to :child
-  belongs_to :task_template
+  belongs_to :task_template, optional: true
   has_one_attached :image
 
   validates :child_id, presence: true

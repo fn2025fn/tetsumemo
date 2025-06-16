@@ -5,7 +5,8 @@
 <%= f.hidden_field :from, value:'memory' %>
 
     <%= f.label :title, "タイトル" %><br>
-    <%= f.collection_select :task_template_id, @task_templates, :id, :title, prompt: "選択してください" %>
+    <%= f.text_field :title, required: true %>
+    <%# <%= f.collection_select :task_template_id, @task_templates, :id, :title, prompt: "選択してください" %>
   </div>
 
   <div class="template-form-group">

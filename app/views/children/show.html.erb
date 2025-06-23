@@ -5,10 +5,10 @@
 <% end %>
 
 <div class="button-memory">
-  <%= link_to "アルバム", album_child_task_logs_path(@child), class: "btn btn-pastel" %>
+  <%= link_to "思い出", album_child_task_logs_path(@child), class: "btn btn-pastel" %>
 </div>
 <div class="button-memory">
-  <%= link_to "写真登録", new_memory_child_task_logs_path(@child), class: "btn btn-pastel" %>
+  <%= link_to "思い出登録", new_memory_child_task_logs_path(@child), class: "btn btn-pastel" %>
 </div>
 <p class="period">
   <%= link_to '今日', child_path(@child, period: 'day')%> |

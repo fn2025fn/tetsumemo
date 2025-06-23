@@ -95,65 +95,64 @@
 ## 実装機能と特徴
 
 - **ユーザー認証機能（Devise）**  
-  ログイン・新規登録により、親が個別に子の管理が可能。
+  ログイン・新規登録により、親が個別に子の管理が可能
   新規登録
-  ![新規登録](https://gyazo.com/c197a2c48c4a5da6b67aecf02d104539.png)
+  [![Image from Gyazo](https://i.gyazo.com/c197a2c48c4a5da6b67aecf02d104539.gif)](https://gyazo.com/c197a2c48c4a5da6b67aecf02d104539)
   ログイン
-  ![ログイン](https://gyazo.com/bd5b971bacea73e2b853a0353780dbe4.png)
+  [![Image from Gyazo](https://i.gyazo.com/bd5b971bacea73e2b853a0353780dbe4.gif)](https://gyazo.com/bd5b971bacea73e2b853a0353780dbe4)
 
 - **子どもアカウントの登録・編集・削除**  
-  親が複数人の子どもを登録でき、個別に記録を管理可能。
+  親が複数人の子どもを登録でき、個別に記録を管理可能
   新規登録１
-  ![新規登録１](https://gyazo.com/2512695be454d80963a154430d98fc63.png)
-
+  [![Image from Gyazo](https://i.gyazo.com/93f0f5975b8bf9640628c09608697e9f.gif)](https://gyazo.com/93f0f5975b8bf9640628c09608697e9f)
+  
   新規登録２
-  ![新規登録２](https://gyazo.com/fe2cd2cc9ee9ee00393e8c0bed82373e.png)
+  [![Image from Gyazo](https://i.gyazo.com/cff719bb6c1aa89a27e53a43f92d1d8c.gif)](https://gyazo.com/cff719bb6c1aa89a27e53a43f92d1d8c)
   
   編集
-  ![編集](https://gyazo.com/50ede2b4ae1ec5bce024e56823398fe9.png)
+  [![Image from Gyazo](https://i.gyazo.com/bd6ee4eebf3cc745acf5afc6347ef47f.gif)](https://gyazo.com/bd6ee4eebf3cc745acf5afc6347ef47f)
   
   削除
-  ![削除](https://gyazo.com/a927f6c48b97efda69f464643817c33b.png)
-
+  [![Image from Gyazo](https://i.gyazo.com/ef7a1389d1c0a42e33a1045ba5bd91a3.gif)](https://gyazo.com/ef7a1389d1c0a42e33a1045ba5bd91a3)
+  
 - **お手伝いテンプレートの作成・編集・削除**  
   親がよくあるお手伝いをテンプレートとして保存し、再利用可能。
   新規作成１
-  ![新規作成１](https://gyazo.com/a275a188048f07ee8870b60467e7121a.png)
-
+  [![Image from Gyazo](https://i.gyazo.com/0204cedb7dd1d2b307acd2309164edcd.gif)](https://gyazo.com/0204cedb7dd1d2b307acd2309164edcd)
+  
   作成２
-  ![作成２](https://gyazo.com/8a33ee84315770bf589c7c35b3435aad.png)
-
+  [![Image from Gyazo](https://i.gyazo.com/5b27dc639f37c3fc3d929e422918d104.gif)](https://gyazo.com/5b27dc639f37c3fc3d929e422918d104)
+  
   編集１
-  ![編集１](https://gyazo.com/8ef39583f61ba1594bcce08099416e7f.png)
-
+  [![Image from Gyazo](https://i.gyazo.com/17ad4023b299bf5ef5f52b98eb5bb792.gif)](https://gyazo.com/17ad4023b299bf5ef5f52b98eb5bb792)
+  
   編集２
-  ![編集２](https://gyazo.com/5e5cd287a806cfc7e571a939f0670e6d.png)
-
-  編集３
-  ![編集３](https://gyazo.com/18562368545aaf4b3116c365132b9d8c.png)
-
+  [![Image from Gyazo](https://i.gyazo.com/727a2cb6fbb4111660c0914bdbd5eff7.gif)](https://gyazo.com/727a2cb6fbb4111660c0914bdbd5eff7)
+  
   削除
-  ![削除](https://gyazo.com/0141f0972e2278dba9aaf574af478cf8.png)
-
+  [![Image from Gyazo](https://i.gyazo.com/42c13084306faa95c5835fa03c6a1e02.gif)](https://gyazo.com/42c13084306faa95c5835fa03c6a1e02)
+  
 
 - **お手伝い記録登録（2ステップ）**  
-  お手伝いと子どもを選択し、「登録」ボタンで即記録。
-  ![お手伝いと子どもを選択し、「登録」ボタンで即記録](https://gyazo.com/7534eba9635ab887261c6599716081a8.png)
-
+  お手伝いと子どもを選択し、「登録」ボタンで即記録
+  [![Image from Gyazo](https://i.gyazo.com/29946321c13ef45c3a3f02d06ec5e68f.gif)](https://gyazo.com/29946321c13ef45c3a3f02d06ec5e68f)
+  
 - **ごほうびポイント自動加算**  
-  記録時にテンプレートに応じて子どもにポイントが自動加算。
-  ![記録時にテンプレートに応じて子どもにポイントが自動加算](https://gyazo.com/09c670410a11ccce619e49de37cca0e6.png)  
-
+  記録時にテンプレートに応じて子どもにポイントが自動加算
+  [![Image from Gyazo](https://i.gyazo.com/870153b02c12fff239ed9f2f6f2d37af.gif)](https://gyazo.com/870153b02c12fff239ed9f2f6f2d37af)
+  
 - **進捗の可視化**  
   子どもごとの日別・週別・月別のお手伝い履歴やポイントを一覧で確認可能。
   日別・週別・月別の表示
-  ![日別・週別・月別の表示](https://gyazo.com/58648cb59e7559a2a2384eb17790cc41.png)
+  ![日別・週別・月別の表示](https://gyazo.com/58648cb59e7559a2a2384eb17790cc41)
   子別の表示
-  ![子別の表示](https://gyazo.com/79c66429c964fdfd57fb99c1fa2a847b.png)
+  ![子別の表示](https://gyazo.com/79c66429c964fdfd57fb99c1fa2a847b)
 
 - **思い出写真登録・閲覧**  
-  お手伝いに関連して写真を登録・アルバム形式で閲覧。
-  ![お手伝いに関連して写真を登録・アルバム形式で閲覧](https://gyazo.com/a9b193a54df4ddf899f8fdffd6238576.png)
+  お手伝いに関連して写真を登録
+  [![Image from Gyazo](https://i.gyazo.com/a9b193a54df4ddf899f8fdffd6238576.gif)](https://gyazo.com/a9b193a54df4ddf899f8fdffd6238576)
+  アルバム形式で閲覧
+  [![Image from Gyazo](https://i.gyazo.com/5bade4303591c0be6902dfb99ff2895c.gif)](https://gyazo.com/5bade4303591c0be6902dfb99ff2895c)
 
 
 ---
@@ -175,6 +174,14 @@
 - ホスティング：Render
 - バージョン管理：Git / GitHub
 - その他：ActiveStorage, Devise, Bootstrap（or CSS）
+
+---
+
+## アプリURL
+https://tetsumemo.onrender.com
+
+Basic認証 ID： admin 
+ Basic認証 パスワード：0602
 
 ---
 

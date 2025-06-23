@@ -9,12 +9,10 @@ class TaskLogsController < ApplicationController
 
   def create
     @task_log = TaskLog.new(task_log_params)
-    puts params[:task_log][:from]
+    @task_log.from = params[:task_log][:from]
     if @task_log.save
-      if params[:task_log][:from] != 'memory'
+      if @task_log.from != 'memory'
         @child = Child.find(@task_log.child_id)
-        @child.total_points += @task_log.task_template.point
-        @child.save
         redirect_to child_path(@child), notice: 'お手伝いを記録し、ごほうびポイント加算'
       else
         redirect_to album_child_task_logs_path(@task_log.child_id), notice: '思い出を登録しました'
@@ -69,6 +67,6 @@ class TaskLogsController < ApplicationController
 
   def task_log_params
     params.require(:task_log).permit(:child_id, :task_template_id, :image, :title,
-                                     :form)
+                                     :from)
   end
 end

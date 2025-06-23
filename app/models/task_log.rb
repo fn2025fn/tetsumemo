@@ -3,10 +3,12 @@ class TaskLog < ApplicationRecord
   belongs_to :task_template, optional: true
   has_one_attached :image
 
-  validates :child_id, presence: true
-  validates :task_template_id, presence: true
+  attr_accessor :from
 
-  after_create :add_point_to_child
+  validates :child_id, presence: true
+  validates :task_template_id, presence: true, unless: -> { from == 'memory' }
+
+  after_create :add_point_to_child, unless: -> { from == 'memory' }
 
   private
 

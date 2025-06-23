@@ -26,7 +26,7 @@ h2 {
 label {
   display: block;
   font-weight: bold;
-  color: #444;
+  color: #93a9c0;
   margin-bottom: 5px;
 }
 
@@ -282,7 +282,6 @@ div.child-icon  {
   margin-bottom: 1rem;
 }
 
-
 .period {
   text-align: center;
   margin-bottom: 1rem;
@@ -453,11 +452,18 @@ ul {
   margin-bottom: 20px;
 }
 
+@media (max-width: 600px) {
+  .polaroid {
+    max-width: 80%;
+  }
+}
+
 .polaroid img {
   display: block;
   width: 300px;
   height: auto;
 }
+
 
 .polaroid .caption {
   font-size: 0.9rem;
@@ -681,7 +687,6 @@ footer a {
   box-sizing: border-box;
 }
 
-
 .form-submit {
   background-color: #f48fb1;
   color: white;
@@ -703,6 +708,7 @@ footer a {
   background-color: #93a9c0;
   border-radius: 8px;
 }
+
 .back-link a {
   color: #fff;
   text-decoration: none;

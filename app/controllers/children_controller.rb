@@ -15,7 +15,7 @@ class ChildrenController < ApplicationController
     @filtered_logs = @child.task_logs.where('created_at >= ?', start_time)
     @total_points = 0
     @filtered_logs.each do |log|
-      @total_points += log.task_template.point
+      @total_points += log.task_template.point if log.task_template.present?
     end
   end
 

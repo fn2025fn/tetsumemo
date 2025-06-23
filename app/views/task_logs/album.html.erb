@@ -4,11 +4,16 @@
  <div class="album-grid">
   <% @image_logs.each do |log| %>
    <div class="album-item">
-    <%# <p class="task-title"><%= log.task_template.title %></p> 
     <%= link_to child_task_log_path(@child,log) do %>
     <%= image_tag log.image.variant(resize_to_limit: [300, 300]), class: "album-image" %>
     <% end %>
-    <p class="task-title"><%= log.task_template.title %></p>
+
+    <% if log.task_template.present? %>
+     <p class="task-title"><%= log.task_template.title %></p>
+    <% else %>
+     <p class="task-title"><%= log.title %></p>
+    <% end %>
+
     <p class="timestamp"><%= log.created_at.strftime('%Y/%m/%d') %></p>
    </div>
   <% end %>  
@@ -16,8 +21,6 @@
 <% else %>
  <p>写真はありません</p>
 <% end %>
-<%# <div style="text-align: center;">
-<%= link_to '戻る', child_path(@child), class: 'btn-pastel' %>
 </div> 
 
 

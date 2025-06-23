@@ -3,12 +3,12 @@
 <div class="template-form-group"><%= form_with model: @task_template, local: true do |f| %>
 
   
-    <%= f.label :title, "お手伝いの名前" %><br>
+    <%= f.label :title, "お手伝いの名前", class: "template-label" %><br>
     <%= f.text_field :title %>
   </div>
 
   <div class="template-form-group">
-    <%= f.label :point, "ポイント" %><br>
+    <%= f.label :point, "ポイント", class: "template-label"%><br>
     <%= f.number_field :point, value: 10 %>
   </div>
 

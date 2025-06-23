@@ -1,9 +1,9 @@
-<h2><%= @task_log.task_template.title %></h2>
 <div class="album-detail-polaroid">
   <div class="polaroid">  
     <% if @task_log.image.attached? %> 
     <%= image_tag @task_log.image.variant(resize_to_limit: [300, 300]) %>
     <% end %>
+    <p><%= @task_log.title %></p>
    <p><%= @task_log.created_at.strftime('%Y/%m/%d') %></p>
   </div>
  <div class="actions">

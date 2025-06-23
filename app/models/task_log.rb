@@ -6,9 +6,13 @@ class TaskLog < ApplicationRecord
   attr_accessor :from
 
   validates :child_id, presence: true
-  validates :task_template_id, presence: true, unless: -> { from == 'memory' }
+  validates :task_template_id, presence: true, unless: :memory_log?
 
-  after_create :add_point_to_child, unless: -> { from == 'memory' }
+  after_create :add_point_to_child, unless: :memory_log?
+
+  def memory_log?
+    title.present? && image.attached? && task_template_id.blank?
+  end
 
   private
 

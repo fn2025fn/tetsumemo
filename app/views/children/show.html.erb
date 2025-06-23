@@ -22,7 +22,12 @@
     <li class="task-log">
       <div class="task-log-header">
         <span class="task-title">
-          <%= log.task_template.title %>(<%= log.task_template.point %>pt)</span>
+         <% if log.task_template.present? %>
+          <%= log.task_template.title %>(<%= log.task_template.point %>pt)
+         <% else %>
+          <%= log.title.presence || "（タイトルなし）" %>（Memory only）
+         <% end %>
+         </span>
       
       <%= link_to '削除', child_task_log_path(@child, log),
                 method: :delete,

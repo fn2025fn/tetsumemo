@@ -181,7 +181,7 @@
 https://tetsumemo.onrender.com
 
 Basic認証 ID： admin 
- Basic認証 パスワード：0602
+Basic認証 パスワード：0602
 
 ---
 

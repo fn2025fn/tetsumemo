@@ -96,7 +96,7 @@
 
 - **ユーザー認証機能（Devise）**  
   ログイン・新規登録により、親が個別に子の管理が可能
-  
+
   <!-- 新規登録 -->
   [![Image from Gyazo](https://i.gyazo.com/c197a2c48c4a5da6b67aecf02d104539.gif)](https://gyazo.com/c197a2c48c4a5da6b67aecf02d104539)
   
@@ -191,6 +191,7 @@
 https://tetsumemo.onrender.com
 
 Basic認証 ID： admin 
+
 Basic認証 パスワード：0602
 
 ---

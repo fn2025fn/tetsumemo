@@ -96,13 +96,16 @@
 
 - **ユーザー認証機能（Devise）**  
   ログイン・新規登録により、親が個別に子の管理が可能
+  
   <!-- 新規登録 -->
   [![Image from Gyazo](https://i.gyazo.com/c197a2c48c4a5da6b67aecf02d104539.gif)](https://gyazo.com/c197a2c48c4a5da6b67aecf02d104539)
-  ログイン
+  
+  <!-- ログイン -->
   [![Image from Gyazo](https://i.gyazo.com/bd5b971bacea73e2b853a0353780dbe4.gif)](https://gyazo.com/bd5b971bacea73e2b853a0353780dbe4)
 
 - **子どもアカウントの登録・編集・削除**  
   親が複数人の子どもを登録でき、個別に記録を管理可能
+
   <!-- 新規登録１ -->
   [![Image from Gyazo](https://i.gyazo.com/93f0f5975b8bf9640628c09608697e9f.gif)](https://gyazo.com/93f0f5975b8bf9640628c09608697e9f)
   
@@ -117,6 +120,7 @@
   
 - **お手伝いテンプレートの作成・編集・削除**  
   親がよくあるお手伝いをテンプレートとして保存し、再利用可能。
+
   <!-- 新規作成１ -->
   [![Image from Gyazo](https://i.gyazo.com/0204cedb7dd1d2b307acd2309164edcd.gif)](https://gyazo.com/0204cedb7dd1d2b307acd2309164edcd)
   
@@ -135,22 +139,28 @@
 
 - **お手伝い記録登録（2ステップ）**  
   お手伝いと子どもを選択し、「登録」ボタンで即記録
+
   [![Image from Gyazo](https://i.gyazo.com/29946321c13ef45c3a3f02d06ec5e68f.gif)](https://gyazo.com/29946321c13ef45c3a3f02d06ec5e68f)
   
 - **ごほうびポイント自動加算**  
   記録時にテンプレートに応じて子どもにポイントが自動加算
+
   [![Image from Gyazo](https://i.gyazo.com/870153b02c12fff239ed9f2f6f2d37af.gif)](https://gyazo.com/870153b02c12fff239ed9f2f6f2d37af)
   
 - **進捗の可視化**  
   子どもごとの日別・週別・月別のお手伝い履歴やポイントを一覧で確認可能。
+
   <!-- 日別・週別・月別の表示 -->
   [![Image from Gyazo](https://i.gyazo.com/58648cb59e7559a2a2384eb17790cc41.gif)](https://gyazo.com/58648cb59e7559a2a2384eb17790cc41)
+
   <!-- 子別の表示 -->
   [![Image from Gyazo](https://i.gyazo.com/79c66429c964fdfd57fb99c1fa2a847b.gif)](https://gyazo.com/79c66429c964fdfd57fb99c1fa2a847b)
 
 - **思い出写真登録・閲覧**  
+
   <!-- お手伝いに関連して写真を登録 -->
   [![Image from Gyazo](https://i.gyazo.com/a9b193a54df4ddf899f8fdffd6238576.gif)](https://gyazo.com/a9b193a54df4ddf899f8fdffd6238576)
+
   <!-- アルバム形式で閲覧 -->
   [![Image from Gyazo](https://i.gyazo.com/5bade4303591c0be6902dfb99ff2895c.gif)](https://gyazo.com/5bade4303591c0be6902dfb99ff2895c)
 

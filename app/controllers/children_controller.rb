@@ -1,10 +1,11 @@
 class ChildrenController < ApplicationController
+  before_action :set_child, only: [:show, :edit, :update, :destroy]
+
   def new
     @child = Child.new
   end
 
   def show
-    @child = Child.find(params[:id])
     start_time = if params[:period] == 'week'
                    Time.zone.now.beginning_of_week
                  elsif params[:period] == 'month'
@@ -20,11 +21,9 @@ class ChildrenController < ApplicationController
   end
 
   def edit
-    @child = Child.find(params[:id])
   end
 
   def update
-    @child = Child.find(params[:id])
     if @child.update(child_params)
       redirect_to @child, notice: '更新しました'
     else
@@ -33,7 +32,6 @@ class ChildrenController < ApplicationController
   end
 
   def destroy
-    @child = Child.find(params[:id])
     @child.destroy
     redirect_to children_path, notice: '削除しました'
   end
@@ -53,6 +51,10 @@ class ChildrenController < ApplicationController
   end
 
   private
+
+  def set_child
+    @child = Child.find(params[:id])
+  end
 
   def child_params
     params.require(:child).permit(:name, :icon)
